@@ -1,0 +1,5 @@
+Not a conda environment: /home/gmohamma/ml20/gmohamma/conda_env/env_dfa
+Traceback (most recent call last):
+  File "cifar10_dfa.py", line 10, in <module>
+    from tinydfa import DFA, DFALayer, FeedbackPointsHandling
+ImportError: cannot import name 'DFA' from 'tinydfa' (unknown location)

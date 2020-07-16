@@ -1,0 +1,18 @@
+#!/bin/bash
+#SBATCH --account=ml20
+#SBATCH --partition=m3g
+#SBATCH --gres=gpu:V100:1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem-per-cpu=4096 
+#SBATCH --job-name=DFA
+#SBATCH --time=1:00:00
+#SBATCH --mail-type=All
+#SBATCH --mail-user=gha.alinejad@gmail.com
+
+module load anaconda/2019.03-Python3.7-gcc5
+source activate /home/gmohamma/ml20/gmohamma/conda_env/env_dfa
+module load cuda cuda/10.1
+
+python cifar10_dfa.py
+
